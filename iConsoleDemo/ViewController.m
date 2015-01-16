@@ -7,21 +7,24 @@
 //
 
 #import "ViewController.h"
+#import "iConsole.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) NSMutableArray *array;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+  
+    self.array = [NSMutableArray array];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onBtnCrash:(id)sender {
+    [iConsole log:@"some message"];
+    [_array addObject:nil];
 }
+
 
 @end

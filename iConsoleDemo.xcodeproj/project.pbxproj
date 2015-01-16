@@ -14,6 +14,8 @@
 		B8ABDD3C1A690991004AA17E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8ABDD3B1A690991004AA17E /* Images.xcassets */; };
 		B8ABDD3F1A690991004AA17E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8ABDD3D1A690991004AA17E /* LaunchScreen.xib */; };
 		B8ABDD4B1A690991004AA17E /* iConsoleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ABDD4A1A690991004AA17E /* iConsoleDemoTests.m */; };
+		B8ABDD5A1A6909BC004AA17E /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ABDD561A6909BC004AA17E /* GTMStackTrace.m */; };
+		B8ABDD5B1A6909BC004AA17E /* iConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ABDD591A6909BC004AA17E /* iConsole.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		B8ABDD441A690991004AA17E /* iConsoleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iConsoleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8ABDD491A690991004AA17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8ABDD4A1A690991004AA17E /* iConsoleDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iConsoleDemoTests.m; sourceTree = "<group>"; };
+		B8ABDD551A6909BC004AA17E /* GTMStackTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMStackTrace.h; sourceTree = "<group>"; };
+		B8ABDD561A6909BC004AA17E /* GTMStackTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMStackTrace.m; sourceTree = "<group>"; };
+		B8ABDD581A6909BC004AA17E /* iConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iConsole.h; sourceTree = "<group>"; };
+		B8ABDD591A6909BC004AA17E /* iConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iConsole.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,8 @@
 		B8ABDD2D1A690991004AA17E /* iConsoleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B8ABDD541A6909BC004AA17E /* GTM */,
+				B8ABDD571A6909BC004AA17E /* iConsole */,
 				B8ABDD321A690991004AA17E /* AppDelegate.h */,
 				B8ABDD331A690991004AA17E /* AppDelegate.m */,
 				B8ABDD351A690991004AA17E /* ViewController.h */,
@@ -117,6 +125,24 @@
 				B8ABDD491A690991004AA17E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8ABDD541A6909BC004AA17E /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABDD551A6909BC004AA17E /* GTMStackTrace.h */,
+				B8ABDD561A6909BC004AA17E /* GTMStackTrace.m */,
+			);
+			path = GTM;
+			sourceTree = "<group>";
+		};
+		B8ABDD571A6909BC004AA17E /* iConsole */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABDD581A6909BC004AA17E /* iConsole.h */,
+				B8ABDD591A6909BC004AA17E /* iConsole.m */,
+			);
+			path = iConsole;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +248,8 @@
 				B8ABDD371A690991004AA17E /* ViewController.m in Sources */,
 				B8ABDD341A690991004AA17E /* AppDelegate.m in Sources */,
 				B8ABDD311A690991004AA17E /* main.m in Sources */,
+				B8ABDD5B1A6909BC004AA17E /* iConsole.m in Sources */,
+				B8ABDD5A1A6909BC004AA17E /* GTMStackTrace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

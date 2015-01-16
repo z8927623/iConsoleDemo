@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "iConsole.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <iConsoleDelegate>
 
 @end
 
@@ -16,8 +17,30 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [iConsole sharedConsole].delegate = self;
+    
     return YES;
+}
+
+- (iConsoleWindow *)window
+{
+    static iConsoleWindow *customWindow = nil;
+    if (!customWindow) {
+        customWindow = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    }
+    return customWindow;
+}
+
+- (void)handleConsoleCommand:(NSString *)command
+{
+    if ([command isEqualToString:@"version"]) {
+        [iConsole info:@"%@ version %@",
+         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"],
+         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
+    } else {
+        [iConsole error:@"unrecognised command, try 'version' instead"];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
